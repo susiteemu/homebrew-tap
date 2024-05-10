@@ -13,7 +13,7 @@ class Startpoint < Formula
       sha256 "a4ccf7b91926deb99f607f8ab163e064b46a712e92be8cb14e0421bc0113f078"
 
       def install
-        bin.install "susiteemu"
+        bin.install "startpoint"
       end
     end
     if Hardware::CPU.arm?
@@ -21,7 +21,7 @@ class Startpoint < Formula
       sha256 "db94959416b80b9e3bc5d77be87a1d1fbb669e35a657da111e6e11dbcdf08e0a"
 
       def install
-        bin.install "susiteemu"
+        bin.install "startpoint"
       end
     end
   end
@@ -32,7 +32,7 @@ class Startpoint < Formula
       sha256 "cbf40ffa44a68b3dd20a429ad7fb23c1424dcc635a61a39eb7aa73d0066b1684"
 
       def install
-        bin.install "susiteemu"
+        bin.install "startpoint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
@@ -40,7 +40,7 @@ class Startpoint < Formula
       sha256 "3ce93a0c16918bc70cbd678401a5994461b9c772400c26334c54f69c825cdb3b"
 
       def install
-        bin.install "susiteemu"
+        bin.install "startpoint"
       end
     end
   end
