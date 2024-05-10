@@ -14,7 +14,7 @@ class Startpoint < Formula
     ENV["PATH"] = "#{ENV["PATH"]}:#{buildpath}/bin"
     (buildpath/"src/github.com/susiteemu/startpoint").install buildpath.children
     cd "src/github.com/susiteemu/startpoint" do
-      system "go", "build", "-o", bin/"kubepfm", "."
+      system "go", "build", "-o", bin/"startpoint", "."
     end
   end
 
