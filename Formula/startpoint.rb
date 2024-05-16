@@ -5,20 +5,20 @@
 class Startpoint < Formula
   desc "A tui app to run and manage HTTP requests"
   homepage "https://github.com/susiteemu/startpoint"
-  version "0.99.5"
+  version "0.99.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.5/startpoint_Darwin_x86_64.tar.gz"
-      sha256 "c863577555af44694b7c3f7053f848d3980437eb8e8202d43af9a264ff679877"
+    on_intel do
+      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.6/startpoint_Darwin_x86_64.tar.gz"
+      sha256 "e325017875e5bebd71f725156cc546a449e7b897920d3ffb13a06f97e685b906"
 
       def install
         bin.install "startpoint"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.5/startpoint_Darwin_arm64.tar.gz"
-      sha256 "7905bfe1fd90c5c335b8286860b694eadb4b8bd726a6fe65e71539779e37531a"
+    on_arm do
+      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.6/startpoint_Darwin_arm64.tar.gz"
+      sha256 "27b2cad045b4ab81d890e4edf5813d7e83d0889b2f6e45d8baf7f3e339abc687"
 
       def install
         bin.install "startpoint"
@@ -27,20 +27,24 @@ class Startpoint < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.5/startpoint_Linux_x86_64.tar.gz"
-      sha256 "7c375cf351a0de20d948e99151a67507c12afa720a9f3b837889981fe350b6ed"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/susiteemu/startpoint/releases/download/v0.99.6/startpoint_Linux_x86_64.tar.gz"
+        sha256 "8c79a2c036a190610840ef889c3882dfabb14302b676f6c07ad1ede9b81850b2"
 
-      def install
-        bin.install "startpoint"
+        def install
+          bin.install "startpoint"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/susiteemu/startpoint/releases/download/v0.99.5/startpoint_Linux_arm64.tar.gz"
-      sha256 "c972bfc65e632252d1e061e16b586ae1e66f9b58fa357d6faf948bf9db281c44"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/susiteemu/startpoint/releases/download/v0.99.6/startpoint_Linux_arm64.tar.gz"
+        sha256 "bf1d5b2d03941bb7ac94ca055b2de41ee671b9f81eff4e883c3632d4136ba6ab"
 
-      def install
-        bin.install "startpoint"
+        def install
+          bin.install "startpoint"
+        end
       end
     end
   end
