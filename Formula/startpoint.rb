@@ -5,20 +5,20 @@
 class Startpoint < Formula
   desc "A tui app to run and manage HTTP requests"
   homepage "https://github.com/susiteemu/startpoint"
-  version "1.2.1"
+  version "1.2.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/susiteemu/startpoint/releases/download/v1.2.1/startpoint_Darwin_x86_64.tar.gz"
-      sha256 "32bc2020db76b144e558e09e7eb7ebcc72b2bcacd64c6cd372c2a6a60a195c45"
+      url "https://github.com/susiteemu/startpoint/releases/download/v1.2.2/startpoint_Darwin_x86_64.tar.gz"
+      sha256 "38898d87a2d3eb97609cd9c27192dfa495d83b7744571fe2418844aa476b0438"
 
       def install
         bin.install "startpoint"
       end
     end
     on_arm do
-      url "https://github.com/susiteemu/startpoint/releases/download/v1.2.1/startpoint_Darwin_arm64.tar.gz"
-      sha256 "a0d52a79b3fdedc27c07554ad2cfd243c68e79941c94a50ad7f3d885d5c71e1a"
+      url "https://github.com/susiteemu/startpoint/releases/download/v1.2.2/startpoint_Darwin_arm64.tar.gz"
+      sha256 "8e789a1cf8a0beaa118712193223d0c1e73df14c5ae729822c095180fb2bc13a"
 
       def install
         bin.install "startpoint"
@@ -29,8 +29,8 @@ class Startpoint < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/susiteemu/startpoint/releases/download/v1.2.1/startpoint_Linux_x86_64.tar.gz"
-        sha256 "ec555e20b82590fd4c1e09b670fa65887b7d3692e385ecd6a5ce92d51b43bca9"
+        url "https://github.com/susiteemu/startpoint/releases/download/v1.2.2/startpoint_Linux_x86_64.tar.gz"
+        sha256 "0e7506acdc3801cd68cb91448a47e5ab9353b70697e9261d344982f9e2ace022"
 
         def install
           bin.install "startpoint"
@@ -39,8 +39,8 @@ class Startpoint < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/susiteemu/startpoint/releases/download/v1.2.1/startpoint_Linux_arm64.tar.gz"
-        sha256 "29209d1c092e1d4142f6f446ab71d5a9e003180130a845d3341594b9dbccf92b"
+        url "https://github.com/susiteemu/startpoint/releases/download/v1.2.2/startpoint_Linux_arm64.tar.gz"
+        sha256 "dc41bc21a6e76cb046ee66cc9d5336c744705f6d1879eb4ff2e43c020607b6ec"
 
         def install
           bin.install "startpoint"
